@@ -4,7 +4,7 @@ class secure_class:
         
     def filter_string(self):
         blocked_symbols = ['>','<','!','/']
-        result = [el for el in self.query if el != 't']
+        result = [el for el in self.query if el not in blocked_symbols]
         result_string = ''
         for i in result:
             result_string += i
